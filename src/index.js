@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import WebFont from 'webfontloader';
 import Contenedor from './elementos/Contenedor';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import { Route, Switch, HashRouter} from 'react-router-dom';
 import EditarGasto from './componentes/EditarGasto';
 import GastosPorCategoria from './componentes/GastosPorCategoria';
 import InicioSesion from './componentes/InicioSesion';
@@ -32,7 +32,7 @@ const Index = () => {
 
 		<AuthProvider>
 			<TotalGastadoProvider>
-				<BrowserRouter>
+				<HashRouter>
 					<Contenedor>
 						<Switch>
 							<Route path="/iniciar-sesion" component={InicioSesion}/>
@@ -53,7 +53,7 @@ const Index = () => {
 							
 						</Switch>
 					</Contenedor>
-			</BrowserRouter>
+			</HashRouter>
 			</TotalGastadoProvider>
 		</AuthProvider>
 
